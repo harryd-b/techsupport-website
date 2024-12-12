@@ -1,0 +1,11 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install PHP & Composer
+      run: sudo apt-get update && sudo apt-get install -y php php-xml php-mbstring
+    - name: Run Tests
+      run: phpunit --configuration phpunit.xml
