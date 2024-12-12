@@ -1,0 +1,11 @@
+rm -f /home/harry/techsupport_website/Dockerfile
+rm -f /home/harry/techsupport_website/src/.env.dev
+rm -f /home/harry/techsupport_website/src/.env.prod
+rm -f /home/harry/techsupport_website/src/bootstrap.php
+rm -f /home/harry/techsupport_website/docker-compose.yml
+rm -f /home/harry/techsupport_website/config/nginx.conf
+rm -f /home/harry/techsupport_website/k8s/namespace.yaml
+rm -f /home/harry/techsupport_website/k8s/deployment.yaml
+rm -f /home/harry/techsupport_website/scripts/scale_up.sh
+rm -f /home/harry/techsupport_website/scripts/scale_down.sh
+rm -f /home/harry/techsupport_website/tests/SampleTest.php

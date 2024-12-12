@@ -1,10 +1,12 @@
 <?php
 $env = getenv('ENV') ?: 'development';
-$envFile = __DIR__ . '/../.env.' . ($env === 'production' ? 'prod' : 'dev');
-if (!file_exists($envFile)) {
-    $envFile = __DIR__ . '/../.env.dev';
-}
+$envFile = __DIR__ . '/.env.' . ($env === 'production' ? 'prod' : 'dev');
+
 $vars = parse_ini_file($envFile);
+if (!$vars) {
+    die("Failed to load environment file");
+}
+
 foreach ($vars as $k => $v) {
     $_ENV[$k] = $v;
 }
