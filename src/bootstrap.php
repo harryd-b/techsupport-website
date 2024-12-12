@@ -17,7 +17,6 @@ try {
     die("DB Connection failed: " . $e->getMessage());
 }
 
-// Placeholder AI and payment integration
 function aiChat($message) {
     return "AI Response to: " . $message;
 }
